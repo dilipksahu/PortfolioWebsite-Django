@@ -1,0 +1,27 @@
+{% load static %}
+
+<section id="skills" class="site-section section-skills">
+    <div class="container">
+        <div class="text-center">
+            <h3>My Skills</h3>
+            <img src="{% static 'img/lines.svg' %}" class="img-lines" alt="lines">
+        </div>
+        <div class="row">
+            {% for skill in skills %}
+            <div class="col-md-4">
+                <div class="skill">
+                    <h4>{{skill.skill}}</h4>
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" data-transitiongoal="{{skill.percent}}"></div>
+                        <!-- /.progress-bar -->
+                    </div>
+                    <!-- /.progress -->
+                </div>
+                <br><br>
+
+            </div>
+            {% endfor %}
+
+        </div>
+    </div>
+</section>
